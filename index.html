@@ -36,7 +36,8 @@
   function onSignIn(tokenResponse) {
     const id_token = tokenResponse.credential;
 
-    fetch("/", {
+    fetch("https://script.google.com/macros/s/AKfycbzr5-O-6v4E8cXhg3GCfGIqWpaY7wOqbHtet32Yv-VvstBxF2Wxadt_a3-Krzol_mQIXw/exec", {
+
       method: "POST",
       body: JSON.stringify({ token: id_token }),
       headers: { "Content-Type": "application/json" },
